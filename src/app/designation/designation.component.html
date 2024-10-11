@@ -1,0 +1,58 @@
+
+<div class="row">
+    @if (isLoader) {
+    <div class="col-12">
+        <div class="spinner-border text-muted"></div>
+        <div class="spinner-border text-primary"></div>
+        <div class="spinner-border text-success"></div>
+        <div class="spinner-border text-info"></div>
+        <div class="spinner-border text-warning"></div>
+        <div class="spinner-border text-danger"></div>
+        <div class="spinner-border text-secondary"></div>
+        <div class="spinner-border text-dark"></div>
+        <div class="spinner-border text-light"></div>
+    </div>
+}@else{
+    @for(item of designationList; track $index) { 
+        <div class="col-3">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{item.designation}}</h4>
+    
+                    <!-- Set portfolio link based on index -->
+                    <a href="{{ $index === 0 ? 'https://dribbble.com/jolin-123' : $index === 1 ? 'https://github.com/Jolin-123' : $index ===2 ? 'https://www.linkedin.com/in/milkj/' : '#'}}" class="card-link" target="_blank">Portfolio</a>
+    
+                    <a href="#" class="card-link">Intro</a>
+                </div>
+            </div>
+        </div>
+    }
+    
+
+}
+
+<div>
+    <br>
+    <br>
+    <h5> Projects and companies I have worked with in the past: </h5>
+    
+    <a href=" https://milklinproject.wixstudio.io/my-site-1" target="_blank"> My Portfolio </a> <br><br>
+
+    <a href="https://www.harvestvictoryus.com/" target="_blank">Harvest Victory</a><br>
+    <a href="https://www.k-cliffs.com/collections/backpacks" target="_blank">Harvest Victory - 2 </a><br> <br>
+
+    <a href="https://oleolesport.com/" target="_blank">Ole Ole Sport</a><br>
+    <a href="https://www.prifina.com/" target="_blank">Prifina</a><br>
+    <a href="https://flowlingostudio.com/" target="_blank">Flowlingo Studio</a><br> <br>
+    <a href="https://www.industryrag.net/" target="_blank">Industry Rag</a>
+</div>
+
+
+</div>
+
+
+<!-- <script>
+    function redirectToUIDesigner() {
+      window.location.href = './uidesigner.component.html';
+    }
+</script> -->
